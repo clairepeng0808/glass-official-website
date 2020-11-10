@@ -1,0 +1,679 @@
+/* 全域 border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* rwd container*/
+.container {
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.container-form {
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+.text-primary {
+  color: #650300;
+}
+
+.text-secondary {
+  color: #aa0601;
+}
+
+.text-dark {
+  color: #000000;
+}
+
+.text-light {
+  color: #ffffff;
+}
+
+.bg-primary {
+  background-color: #aa0601;
+}
+
+.bg-light {
+  background-color: #aa06010d;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: pink;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+section {
+  padding: 64px 40px 80px 40px;
+}
+
+.nav {
+  padding: 30px 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 64px;
+  justify-content: flex-end;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.banner {
+  height: 840px;
+  background: url("https://hexschool.github.io/webLayoutTraining1st/week3/banner.png"),
+    no-repeat;
+  background-position: center, center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.section-title {
+  font-size: 48px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.feature-list li {
+  text-align: center;
+  width: 20%;
+}
+
+.feature-list li img {
+  margin: 0 auto 40px auto;
+  width: 100px;
+  height: 100px;
+}
+
+.feature-title {
+  color: #650300;
+  font-size: 24px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.classic-frames-list li {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.classic-frame-pic {
+  width: 50%;
+  margin-right: 30px;
+}
+
+.classic-frame-type {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.frame-type-icon {
+  margin-right: 8px;
+  height: 48px;
+  width: 48px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.diamond {
+  background-image: url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond.svg");
+}
+.sun {
+  background-image: url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-sun.svg");
+}
+.thunder {
+  background-image: url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder.svg");
+}
+
+.frame-type-text {
+  text-transform: uppercase;
+  color: #aa0601;
+  font-size: 48px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.classic-frames-list li:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.classic-frames-list li:nth-child(2) .classic-frame-pic {
+  margin-left: 30px;
+  margin-right: 0px;
+}
+
+.classic-frames-list li:nth-child(2) .classic-frame-type {
+  justify-content: flex-end;
+}
+
+.co-branding-frames {
+  background-image: url("https://hexschool.github.io/webLayoutTraining1st/week3/bg.png");
+  background-position: center;
+}
+
+.co-branding-frames-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.frame-type-box {
+  position: relative;
+  text-align: center;
+}
+
+.frame-type-box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.frame-type-box a:hover::before {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.frame-type-box-title {
+  color: #aa0601;
+  font-size: 72px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.rec-card-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.rec-card-list li {
+  border: 1px solid #dee2e6;
+}
+
+.rec-card-intro {
+  margin: 14px 16px;
+}
+
+.rec-card-intro .title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.rec-card-intro .text {
+  margin-bottom: 10px;
+}
+
+.rec-card-intro .last-updated {
+  font-size: 14px;
+  color: #707070;
+}
+.contact h2.section-title {
+  margin-bottom: 24px;
+}
+
+.contact-intro {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+textarea {
+  border: 1px solid #000000;
+  padding: 14px 16px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  width: 100%;
+  font-size: 16px;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #650300;
+}
+
+input[type="checkbox" i] {
+  width: 24px;
+  border: 1px solid #000000;
+}
+
+input[type="button" i] {
+  padding: 16px 0;
+  cursor: pointer;
+  width: 350px;
+  background-color: #aa0601;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  border: none;
+}
+
+input[type="button" i]:hover,
+input[type="button" i]:active {
+  background-color: #650300;
+  text-align: center;
+}
+
+.privacy {
+  margin-bottom: 42px;
+}
+
+.footer {
+  padding: 48px 40px 28px 40px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.footer-nav-list {
+  display: flex;
+  gap: 48px;
+}
+
+.footer-nav-social-icons {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-info {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 24px;
+}
+
+.footer-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-info img {
+  margin-right: 20px;
+}
+
+.footer-text {
+  font-size: 36px;
+}
+.footer-bottom {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.footer-brand-logo {
+  margin-right: 38px;
+}
+
+.terms {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 62px;
+}
+
+@media (max-width: 992px) {
+  section {
+    padding: 40px;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  .nav {
+    padding: 30px 40px;
+  }
+  .nav-list {
+    gap: 40px;
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+  .features {
+    padding-bottom: 80px;
+  }
+  .feature-list {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .feature-list li {
+    text-align: center;
+    width: 32%;
+  }
+  .feature-list li img {
+    margin: 0 auto 16px auto;
+    width: 80px;
+    height: 80px;
+  }
+  .feature-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .classic-frames-list li {
+    margin-bottom: 8px;
+  }
+  .frame-type-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .frame-type-text {
+    font-size: 28px;
+  }
+  .classic-frames-list li:nth-child(2) {
+    flex-direction: row;
+  }
+  .classic-frames-list li:nth-child(2) .classic-frame-pic {
+    margin-left: 0px;
+    margin-right: 30px;
+  }
+  .classic-frames-list li:nth-child(2) .classic-frame-type {
+    justify-content: flex-start;
+  }
+
+  .frame-type-box-title {
+    font-size: 32px;
+    width: 100%;
+  }
+  .rec-card-list {
+    flex-wrap: wrap;
+  }
+  .rec-card-list li {
+    width: 40%;
+  }
+  .rec-card-list li img {
+    width: 100%;
+  }
+  .rec-card-intro .title {
+    margin-bottom: 16px;
+  }
+  .rec-card-intro .text {
+    margin-bottom: 16px;
+  }
+  .contact h2.section-title {
+    margin-bottom: 16px;
+  }
+  .contact-intro {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .contact-form input,
+  textarea {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-top: 2px;
+    margin-bottom: 8px;
+  }
+  input[type="button" i] {
+    width: 210px;
+    padding: 8px 0;
+  }
+  .privacy {
+    margin-bottom: 20px;
+  }
+  .footer {
+    padding: 40px;
+  }
+  .footer-nav-list {
+    gap: 40px;
+  }
+  .footer-nav-social-icons {
+    gap: 24px;
+  }
+  .footer-nav-social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  .footer-info {
+    padding-bottom: 16px;
+  }
+  .footer-info li {
+    margin-bottom: 8px;
+  }
+  .footer-info img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  .footer-text {
+    font-size: 20px;
+  }
+  .footer-brand-logo {
+    display: none;
+  }
+  .terms {
+    font-size: 14px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  section {
+    padding: 32px 15px;
+  }
+  .nav {
+    padding: 10px 0 0 0;
+    flex-wrap: wrap;
+  }
+
+  .nav-logo {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .nav-logo img {
+    margin: 0 auto;
+    width: 48px;
+  }
+  .nav-list {
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+  }
+  .nav-list li {
+    width: 50%;
+    font-size: 20px;
+    padding: 8px 0;
+    text-align: center;
+    border: 1px solid #ffffff;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  .banner {
+    height: 394px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .features {
+    padding-bottom: 52px;
+  }
+  .feature-list li {
+    width: 237px;
+  }
+  .feature-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .frame-type-text {
+    font-size: 28px;
+  }
+  .classic-frames-list li {
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .classic-frame-pic {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .classic-frame-type {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    width: 100%;
+  }
+
+  .classic-frames-list li:nth-child(2) .classic-frame-pic {
+    margin-right: 0px;
+  }
+  .classic-frames-list li:nth-child(2) .classic-frame-type {
+    justify-content: center;
+  }
+  .diamond {
+    background-image: url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond-white.svg");
+  }
+  .sun {
+    background-image: url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-sun-white.svg");
+  }
+  .thunder {
+    background-image: url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder-white.svg");
+  }
+  .co-branding-frames-list {
+    flex-wrap: wrap;
+  }
+  .frame-type-box {
+    width: 100%;
+  }
+
+  .frame-type-text {
+    color: #fff;
+  }
+  .rec-card-list li {
+    width: 100%;
+  }
+
+  .contact h2.section-title {
+    margin-bottom: 20px;
+  }
+
+  input[type="button" i] {
+    width: 165px;
+  }
+
+  .footer {
+    padding: 24px 15px 20px 16px;
+  }
+  .footer-info {
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 16px;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 8px;
+  }
+
+  .footer-nav-list {
+    display: none;
+  }
+
+  .footer-info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  .footer-text {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    margin-top: 18px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .copyright-text {
+    width: 100%;
+    margin-bottom: 7px;
+  }
+  .terms {
+    position: static;
+    font-size: 14px;
+    gap: 8px;
+    flex-direction: column;
+  }
+  .footer-brand-logo {
+    display: block;
+    order: 3;
+    width: 46px;
+    margin-right: 0;
+  }
+}
