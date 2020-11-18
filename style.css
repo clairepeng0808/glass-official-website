@@ -305,7 +305,7 @@ input[type="button" i] {
   cursor: pointer;
   width: 350px;
   background-color: #aa0601;
-  color: #ffffff;
+  color: white;
   display: block;
   margin: 0 auto;
   border: none;
@@ -439,7 +439,6 @@ input[type="button" i]:active {
 
   .frame-type-box-title {
     font-size: 32px;
-    width: 100%;
   }
   .rec-card-list {
     flex-wrap: wrap;
@@ -625,7 +624,7 @@ input[type="button" i]:active {
   }
 
   .footer {
-    padding: 24px 15px 20px 16px;
+    padding: 24px 15px 20px 15px;
   }
   .footer-info {
     border-bottom: none;
